@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="content-section">
+    <form method="post">
+        {{ form_buy.hidden_tag() }}
+        <fieldset>
+            <legend class="border-bottom mb-4">EXCHANGE BUY</legend>
+            {{ form_buy.currency.label }} {{ form_buy.currency() }}
+            {{ form_buy.amount.label }} {{ form_buy.amount() }}
+        </fieldset>
+        {{ form_buy.submit() }}
+    </form>
+</div>
+<div class="content-section">
+    <form method="post">
+        {{ form_sell.hidden_tag() }}
+        <fieldset>
+            <legend class="border-bottom mb-4">EXCHANGE SELL</legend>
+            {{ form_sell.currency.label }} {{ form_sell.currency() }}
+            {{ form_sell.amount.label }} {{ form_sell.amount() }}
+        </fieldset>
+        {{ form_sell.submit() }}
+    </form>
+</div>
+{% endblock content %}
